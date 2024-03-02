@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css'
-import css from './App.module.css'
+import Description from './components/Description/Description';
 import Options from './components/Options/Options'
 import Feedback from './components/Feedback/Feedback'
 
@@ -9,18 +9,19 @@ const App = () => {
   const [feedback, setFeedback] = useState(initialFeedback);
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const positiveFeedback = totalFeedback === 0 ? 0 : Math.round(((feedback.good + feedback.neutral) / totalFeedback) * 100);
 
   useEffect(() => {
     localStorage.setItem('feedback', JSON.stringify(feedback));
     localStorage.setItem('totalFeedback', totalFeedback);
-  }, [feedback, totalFeedback]);
+    localStorage.setItem('positiveFeedback', positiveFeedback);
+  }, [feedback, totalFeedback, positiveFeedback]);
 
   return (
     <div>
-      <h1 className={css.feedbackTitle}>Sip Happens Café</h1>
-      <p className={css.feedbackDesc}>Please leave your feedback about our service by selecting one of the options below.</p>
+      <Description />
       <Options setFeedback={setFeedback} totalFeedback={totalFeedback} />
-      <Feedback feedback={feedback} totalFeedback={totalFeedback}/>
+      <Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />
     </div>
   );
 };
