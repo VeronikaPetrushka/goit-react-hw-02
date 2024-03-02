@@ -1,0 +1,105 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    margin: 0;
+}
+
+.profile {
+    border: 2px solid;
+    border-radius: 8px;
+    border-color: black;
+    outline: none;
+    background-color: whitesmoke;
+    padding-top: 5px;
+    max-height: 174px;
+    max-width: fit-content;
+    margin: auto;
+}
+
+.userImgWrapper {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    background-color: darkgrey;
+    margin: 0 auto 8px;
+}
+
+.userImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userName {
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.userDesc {
+    font-size: 10px;
+    color: grey;
+    font-weight: 500px;
+}
+
+.userStats {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid;
+    border-color: grey;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.userStatItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.userStatItem:not(:last-child) {
+    border-right: 1px solid;
+    border-color: grey;
+}
+
+.userStatItemText {
+    font-weight: 500px;
+    color: black;
+    font-size: 10px;
+    margin: 5px 5px 0;
+}
+
+.userStatItemText.userViews {
+    margin: 5px 13px 0;
+}
+
+.userStatItemText.userLikes {
+    margin: 5px 15px 0;
+}
+
+.userStatItemValue {
+    font-weight: 700;
+    color: black;
+    font-size: 10px;
+    margin: 0 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,64 @@
+.transactionTable {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-color: black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.trHeadList {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    background-color: black;
+    border-bottom: 1px solid;
+    border-color: black;
+}
+
+.trHeadItem {
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.trTableBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.trBodyList {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.trBodyList:not(:last-child) {
+    border-bottom: 1px solid;
+    border-color: black;
+}
+
+.trBodyItem {
+    font-size: 10px;
+    font-weight: 600;
+    color: black;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.trBodyList:nth-child(even) {
+    background-color: darkgrey;
+}
+
+.trHeadItem:not(:last-child),
+.trBodyItem:not(:last-child) {
+    border-right: 1px solid;
+    border-color: black;
+}
