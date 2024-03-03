@@ -1,6 +1,6 @@
 import css from './Options.module.css'
 
-const Options = ({ setFeedback, totalFeedback }) => {
+const Options = ({ setFeedback, totalFeedback, handleReset }) => {
   const handleFeedback = (type) => {
     setFeedback((prevFeedback) => ({
       ...prevFeedback,
@@ -21,7 +21,7 @@ const Options = ({ setFeedback, totalFeedback }) => {
       </li>
     {totalFeedback !== 0 && (
       <li>
-        <button type='submit' onClick={() => setFeedback({ good: 0, neutral: 0, bad: 0 })}>Reset</button>
+        <button type='submit' onClick={handleReset}>Reset</button>
       </li>
     )}
     </ul>

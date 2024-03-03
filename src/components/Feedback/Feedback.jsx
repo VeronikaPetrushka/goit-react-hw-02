@@ -1,12 +1,7 @@
 import css from './Feedback.module.css'
-import Notification from '../Notification/Notification';
 
 const Feedback = ({ feedback, totalFeedback, positiveFeedback }) => {
   const { good, neutral, bad } = feedback;
-
-  if (totalFeedback === 0) {
-    return <Notification message="No feedback yet" />;
-  }
 
   return (
       <ul className={css.feedbackList}>
